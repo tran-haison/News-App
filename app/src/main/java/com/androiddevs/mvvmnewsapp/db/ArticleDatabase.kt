@@ -22,7 +22,7 @@ abstract class ArticleDatabase : RoomDatabase() {
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
             instance ?: createDatabase(context).also {
-                instance = it;
+                instance = it
             }
         }
 
